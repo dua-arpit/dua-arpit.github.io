@@ -5,5 +5,4 @@ inline: true
 related_posts: false
 ---
 
-New group website is here now 
----
+Our group website is here now 

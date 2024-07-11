@@ -19,7 +19,7 @@ selected_papers: false # includes a list of papers marked as "selected={true}"
 social: true # includes social icons at the bottom of the page
 
 
-I am an Assistant Professor in the Department of Physics at Virginia Tech. Before this position, I was a Joint Simons Ultra-Quantum Matter-IQIM postdoc at Caltech under Xie Chen and a PhD student at Yale University under Meng Cheng and Liang Jiang. 
+I am an Assistant Professor in the Department of Physics at Virginia Tech. Before this position, I was a Joint [Simons](https://projects.iq.harvard.edu/ultra-qm/home)-[IQIM](https://iqim.caltech.edu/) postdoc at Caltech under Xie Chen and a PhD student at Yale University under Meng Cheng and Liang Jiang. 
 
 Currently, my group and I are interested in addressing the following key questions: 
 

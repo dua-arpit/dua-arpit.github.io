@@ -1,2 +1,5 @@
+---
+Jagannath Das
+---
 Jagannath Das is a new postdoc in the group. His primary focus has been theoretical condensed matter physics, and he is now exploring quantum information. His research interests include strongly correlated systems, especially quantum spin liquid, topological phases of matter, and topological quantum computing.
 Apart from research, he loves watching cricket, cooking, and trekking. Email: jagannath.das0111@gmail.com

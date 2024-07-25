@@ -17,4 +17,12 @@ profiles:
       <p>317 Robeson Hall</p>
       <p>850 W Campus Dr</p>
       <p>Blacksburg, VA 24061</p>
+  - align: right
+    image: sayandip_dhara_pic.png
+    content: about_sayandip.md
+    image_circular: false # crops the image to make it circular
+  - align: right
+    image: Jagannath_das_pic.png
+    content: about_jagannath.md
+    image_circular: false # crops the image to make it circular
 ---

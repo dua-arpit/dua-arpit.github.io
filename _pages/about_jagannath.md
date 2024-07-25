@@ -1,4 +1,2 @@
-I am mainly focused on theoretical condensed matter physics. My  current research interests include strongly correlated systems specially quantum spin liquid, topological phases of matter and topological quantum computing.
-Apart from research I love watching cricket, cooking and trekking. 
-
-Contact Info: jagannath.das0111@gmail.com
+Jagannath Das is a new postdoc in the group. His primary focus has been theoretical condensed matter physics, and he is now exploring quantum information. His research interests include strongly correlated systems, especially quantum spin liquid, topological phases of matter, and topological quantum computing.
+Apart from research, he loves watching cricket, cooking, and trekking. Feel free to reach out to him at jagannath.das0111@gmail.com

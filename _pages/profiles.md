@@ -13,7 +13,7 @@ profiles:
     image: sayandip_dhara_pic.png
     content: about_sayandip.md
     image_circular: false # crops the image to make it circular
-  - align: right
+  - align: left
     image: Jagannath_das_pic.png
     content: about_jagannath.md
     image_circular: false # crops the image to make it circular

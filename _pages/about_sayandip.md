@@ -1,0 +1,1 @@
+I am a theoretical and computational physicist with a broad interest in quantum many-body systems and quantum information. My current research focuses on fault-tolerant quantum architectures and error-correcting codes. Additionally, I have a keen interest in machine learning architectures. 

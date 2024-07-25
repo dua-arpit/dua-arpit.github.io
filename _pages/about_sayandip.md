@@ -1,1 +1,4 @@
+---
+Sayandip Dhara
+---
 Sayandip Dhara is a new postdoc in the group. He is a theoretical and computational physicist interested in quantum many-body systems and quantum information. His current research focuses on fault-tolerant quantum architectures and error-correcting codes. Additionally, he has a keen interest in machine learning architectures. Email: sayandip@vt.edu

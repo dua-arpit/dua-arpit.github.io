@@ -2,6 +2,7 @@
 layout: page
 permalink: /repositories/
 title: repos
+description: simulation codes used in publications
 nav: true
 nav_order: 4
 ---

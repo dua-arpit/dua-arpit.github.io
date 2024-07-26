@@ -16,8 +16,5 @@ profiles:
   - align: left
     image: Jagannath_das_pic.png
     content: about_jagannath.md
-    image_circular: false # crops the image to make it circular
-# Students
-coming soon
-     
+    image_circular: false # crops the image to make it circular     
 ---

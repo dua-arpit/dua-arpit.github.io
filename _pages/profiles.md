@@ -1,7 +1,7 @@
 ---
 layout: profiles
 permalink: /people/
-title: group members
+title: group 
 nav: true
 nav_order: 7
 

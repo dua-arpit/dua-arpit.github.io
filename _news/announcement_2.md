@@ -1,8 +1,8 @@
 ---
 layout: post
-date: 2024-07-01 16:11:00-0400
+date: 2023-12-25 15:59:00-0400
 inline: true
 related_posts: false
 ---
 
-Our group website is here now 
+I have moved to Virginia Tech as an Assistant Professor. 

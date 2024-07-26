@@ -22,5 +22,5 @@ I am an Assistant Professor in the Department of Physics at Virginia Tech. Befor
 
 Currently, my group researches quantum error correction, topological order, and the physics of learning. 
 
-Email me at adua@vt.edu if you are interested in the group. 
+Email me at adua@vt.edu to learn more about my research and collaboration. 
 

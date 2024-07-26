@@ -7,7 +7,7 @@ github_users:
 repo_description_lines_max: 2
 
 github_repos:
+  - dua-arpit/single_shot_decoding_fractal
   - dua-arpit/floquetcodes
   - dua-arpit/qecsim
-  - dua-arpit/single_shot_decoding_fractal
   - panqec/panqec

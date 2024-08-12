@@ -20,7 +20,8 @@ social: true # includes social icons at the bottom of the page
 
 I am an Assistant Professor in the Department of Physics at Virginia Tech. Before this position, I was a Joint [Simons](https://projects.iq.harvard.edu/ultra-qm/home)-[IQIM](https://iqim.caltech.edu/) postdoc at Caltech under Xie Chen and a PhD student at Yale University under Meng Cheng and Liang Jiang. 
 
-Currently, my group researches quantum error correction, topological order, and the physics of learning. 
+Currently, my group researches quantum error correction, topological order, and the physics of learning. In quantum error correction, we develop new codes with desired properties (code parameters, set of fault-tolerant gates, locality, lattice constraints) using conventional approaches and machine-learning techniques. In topological order, we are currently focused on thermalization properties and self-correcting models. Within learning, we are focused on understanding and tailoring AI architectures using physics-based insights, as well as understanding how learning happens. 
+
 
 Email me at adua@vt.edu to learn more about my research and collaboration. 
 

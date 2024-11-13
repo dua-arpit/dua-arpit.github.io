@@ -22,5 +22,8 @@ I am an Assistant Professor in the Department of Physics at Virginia Tech. Befor
 
 Currently, my group researches quantum error correction, topological order, and the physics of learning. 
 
+In quantum error correction, we develop new codes with desired properties (code parameters, set of fault-tolerant gates, locality, lattice constraints) using conventional approaches and machine-learning techniques. In topological order, we are currently focused on thermalization properties and self-correcting models. Within learning, we are focused on understanding and tailoring AI architectures using physics-based insights and understanding how learning happens. 
+
+
 Email me at adua@vt.edu to learn more about my research and collaboration. 
 

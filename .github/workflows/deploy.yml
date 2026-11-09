@@ -1,6 +1,9 @@
-name: Deploy site
+name: Publish site
 
-# Builds the static site with site/build.py and publishes it to the gh-pages branch.
+# The site is plain HTML committed in the repository root, so nothing is built here.
+# This job only copies those files to the gh-pages branch. It is a fallback:
+# with Settings > Pages > "Deploy from a branch: master / (root)", GitHub serves
+# the root directly and this job is not needed.
 on:
   push:
     branches: [master, main]
@@ -10,26 +13,21 @@ permissions:
   contents: write
 
 concurrency:
-  group: deploy
+  group: publish
   cancel-in-progress: true
 
 jobs:
-  deploy:
+  publish:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-      - name: Set up Python
-        uses: actions/setup-python@v5
+      - uses: actions/checkout@v4
+      - name: Collect site files
+        run: |
+          mkdir _publish
+          cp -r index.html 404.html style.css robots.txt .nojekyll publications group cv people news teaching repositories assets _publish/
+          if [ -d logos ]; then cp -r logos _publish/; fi
+      - uses: JamesIves/github-pages-deploy-action@v4
         with:
-          python-version: "3.12"
-      - name: Install dependencies
-        run: pip install -r site/requirements.txt
-      - name: Build
-        run: python site/build.py --out _site
-      - name: Deploy to gh-pages
-        uses: JamesIves/github-pages-deploy-action@v4
-        with:
-          folder: _site
+          folder: _publish
           branch: gh-pages
           clean: true

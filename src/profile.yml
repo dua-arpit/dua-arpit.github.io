@@ -97,6 +97,12 @@ group:
       email: jagannath.das0111@gmail.com
     - name: Pedro Medina
       role: Graduate student
+      photo: assets/img/pedro.jpg
+      bio: >-
+        Pedro is a Ph.D. student in Physics at Virginia Tech. He is interested in the construction and
+        properties of qLDPC codes, their performance under different noise models, and the development
+        of decoding strategies. His current research focuses on single-shot decoding and understanding
+        the scaling behavior of logical error rates in qLDPC codes.
     - name: Chuen Hei Chan
       role: Graduate student
     - name: Alexander Shupp

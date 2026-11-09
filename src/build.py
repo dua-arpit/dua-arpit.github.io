@@ -314,9 +314,15 @@ def group(prof):
         return f'<li>{portrait(m)}<div><h3>{E(m["name"])}</h3>{role}{bio}{mail}</div></li>'
 
     members = "".join(li(m) for m in g["members"])
+    alumni = "".join(
+        f'<li>{portrait(m)}<div><h3>{E(m["name"])}</h3>'
+        + (f'<p class="mute">Now: {E(m["now"])}</p>' if m.get("now") else "") + '</div></li>'
+        for m in g.get("alumni", []))
+    alumni_block = f'<section class="alumni"><h2>Alumni</h2><ul class="alumni-list">{alumni}</ul></section>' if alumni else ""
     body = f"""
 <section class="head"><h1>Group at Virginia Tech</h1><p class="mute">{E(g["intro"])}</p></section>
 <ul class="members">{members}</ul>
+{alumni_block}
 """
     return page("Group at Virginia Tech", "group", body, prof, f"Research group of {prof['name']}.")
 

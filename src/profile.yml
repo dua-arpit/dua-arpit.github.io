@@ -100,7 +100,13 @@ group:
     - name: Chuen Hei Chan
       role: Graduate student
     - name: Alexander Shupp
-      role: Undergraduate student
+      role: Research assistant
+      photo: assets/img/alexander.jpg
+      bio: >-
+        Alexander completed his BS in Physics at Virginia Tech in May 2026. He currently works as a
+        research assistant, developing graphical methods to represent known Majorana fermion codes and
+        construct new ones. His research interests include quantum error correction, graphical tensor
+        calculi, and topological quantum computing.
   alumni:
     - name: Sayandip Dhara
       role: Postdoctoral researcher

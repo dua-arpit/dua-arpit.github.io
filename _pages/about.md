@@ -30,6 +30,6 @@ My group researches quantum error correction, fault-tolerant quantum computation
 - Fault-tolerant architectures and resource estimates for cryptographically relevant workloads.
 - Code design with machine-learning and AI-assisted methods.
 
-Our research is supported by a DOE Office of Science grant (lead PI, 2026 to 2029) and an NSF Physics (PHY) grant (PI). I am also a Co-Investigator on a Yale-led NSF Quantum Leap Challenge Institute and on the DOE Genesis Mission Phase I project on AI-enabled co-design of fault-tolerant logical interfaces in qLDPC codes.
+Our research is supported by a DOE Office of Science grant (lead PI) and an NSF Physics (PHY) grant (PI). I am also a Co-Investigator on a Yale-led NSF Quantum Leap Challenge Institute and on the DOE Genesis Mission Phase I project on AI-enabled co-design of fault-tolerant logical interfaces in qLDPC codes.
 
 Email me at adua@vt.edu (Virginia Tech) or adua@quera.com (QuEra) to learn more about my research and collaboration.

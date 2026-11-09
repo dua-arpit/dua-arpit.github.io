@@ -1,14 +1,8 @@
 name: Prettier code formatter
 
+# Disabled: this al-folio check does not apply to the new static site. Run by hand if needed.
 on:
-  pull_request:
-    branches:
-      - master
-      - main
-  push:
-    branches:
-      - master
-      - main
+  workflow_dispatch:
 
 jobs:
   check:

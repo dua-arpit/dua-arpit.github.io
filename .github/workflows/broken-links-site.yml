@@ -1,9 +1,8 @@
 name: Check for broken links on site
 
+# Disabled: this al-folio check does not apply to the new static site. Run by hand if needed.
 on:
-  workflow_run:
-    workflows: [Deploy site]
-    types: [completed]
+  workflow_dispatch:
 
 jobs:
   check-links-on-site:

@@ -22,17 +22,9 @@ env:
   DESKTOP_LIGHTHOUSE_PARAMS: "--only-categories=performance,accessibility,best-practices,seo --preset=desktop --throttling.cpuSlowdownMultiplier=1"
 
 # TRIGGERS
+# Disabled: this al-folio check does not apply to the new static site. Run by hand if needed.
 on:
-  page_build:
-  # schedule: # Check your schedule here => https://crontab.guru/
-  #   - cron: '55 23 * * 0' # e.g. every Sunday at 23:55
-  #
-  # THAT'S IT; YOU'RE DONE;
   workflow_dispatch:
-
-########################################################################
-# THAT'S IT; YOU DON'T HAVE TO DEFINE ANYTHING IN THE FOLLOWING
-########################################################################
 
 jobs:
   lighthouse-badger-easy:

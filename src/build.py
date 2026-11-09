@@ -73,7 +73,7 @@ def load_papers():
             key=e["ID"], title=clean_tex(e["title"]),
             authors=[person(a) for a in re.split(r"\s+and\s+", e.get("author", ""))],
             year=int(str(e["year"]).strip()), month=MONTHS.get(month, 0),
-            venue=venue, arxiv=arxiv, doi=doi))
+            venue=venue, arxiv=arxiv, doi=doi, patent=clean_tex(e.get("patent", "")) or None))
     papers.sort(key=lambda p: (p["year"], p["month"], p["arxiv"] or ""), reverse=True)
     return papers
 
@@ -95,6 +95,8 @@ def load_news(papers):
             if not match:
                 raise SystemExit(f"{f.name}: paper {pid} is not in papers.bib")
             body_html += f'<span class="nauth">{fmt_authors(match[0]["authors"])}</span>'
+            if match[0]["patent"]:
+                body_html += f'<span class="patent">{E(match[0]["patent"])}</span>'
         items.append(dict(date=d, html=body_html))
     items.sort(key=lambda n: n["date"], reverse=True)
     return items
@@ -190,7 +192,8 @@ def paper_li(p):
     search = E(" ".join([p["title"]] + p["authors"] + [p["venue"] or "", str(p["year"])]).lower())
     return (f'<li class="paper" data-s="{search}"><a class="ptitle" href="{E(href)}">{E(p["title"])}</a>'
             f'<div class="authors">{fmt_authors(p["authors"])}</div>'
-            f'<div class="meta">{venue}<span class="plinks">{" ".join(links)}</span></div></li>')
+            f'<div class="meta">{venue}<span class="plinks">{" ".join(links)}</span>'
+            + (f'<span class="patent">{E(p["patent"])}</span>' if p["patent"] else "") + '</div></li>')
 
 
 def news_li(n):

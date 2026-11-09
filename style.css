@@ -135,6 +135,13 @@ input[type=search]:focus{border-color:var(--t)}
 .mono{width:200px;aspect-ratio:4/5;border-radius:10px;background:var(--zone);display:flex;align-items:center;justify-content:center;font-size:44px;color:var(--wire);letter-spacing:.02em}
 .members p{max-width:64ch}
 
+/* alumni */
+.alumni{margin-top:56px}
+.alumni-list li{display:grid;grid-template-columns:72px minmax(0,1fr);gap:20px;align-items:center;padding:14px 0;border-top:1px solid var(--zone)}
+.alumni-list img,.alumni-list .mono{width:72px;height:72px;aspect-ratio:1/1;object-fit:cover;border-radius:50%;font-size:22px}
+.alumni-list h3{font-size:18px;margin:0 0 2px}
+.alumni-list p{margin:0;font-size:15px}
+
 /* cv */
 .cv{margin-bottom:52px}
 .rows li{display:grid;grid-template-columns:170px minmax(0,1fr);gap:24px;padding:12px 0;border-bottom:1px solid var(--zone)}

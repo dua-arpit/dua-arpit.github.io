@@ -62,7 +62,7 @@ grants:
   - {title: Advancing Quantum Computation Beyond Qubits, name: DOE Office of Science, role: Lead PI, logo: doe}
   - {title: Ultra-high Performance Quantum Memories through Symmetries, name: NSF Physics (PHY), role: PI, logo: nsf}
   - {title: The Physics and Engineering of Practical Quantum Error Correction (PRACTIQAL), name: NSF Quantum Leap Challenge Institute, note: Yale-led, role: Co-Investigator, logo: nsf}
-  - {title: AI-enabled co-design of fault-tolerant logical interface in quantum LDPC codes, name: DOE Genesis Mission, note: Phase I, role: Co-Lead, logo: doe}
+  - {title: AI-enabled co-design of fault-tolerant logical interface in quantum LDPC codes, name: DOE Genesis Mission, note: Phase I, role: Co-Investigator, logo: doe}
 
 positions:
   - {years: 2025–present, title: Principal Quantum Scientist, org: "QuEra Computing Inc., Boston, MA"}

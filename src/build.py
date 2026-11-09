@@ -193,9 +193,9 @@ def news_li(n):
 
 def page(title, active, body, prof, desc=None):
     nav = "".join(
-        f'<a href="{href}"{" aria-current=page" if key == active else ""}>{key}</a>'
-        for key, href in [("about", "/"), ("publications", "/publications/"),
-                          ("group", "/group/"), ("cv", "/cv/")])
+        f'<a href="{href}"{" aria-current=page" if key == active else ""}>{label}</a>'
+        for key, label, href in [("about", "About", "/"), ("publications", "Publications", "/publications/"),
+                                 ("group", "Group", "/group/"), ("cv", "CV", "/cv/")])
     full = prof["name"] if title is None else f'{title} · {prof["name"]}'
     year = dt.date.today().year
     return f"""<!doctype html>
@@ -215,7 +215,7 @@ def page(title, active, body, prof, desc=None):
 <main class="wrap">
 {body}
 </main>
-<footer class="wrap"><span>© {year} {E(prof['name'])}</span><span>updated {dt.date.today():%b %Y}</span></footer>
+<footer class="wrap"><span>© {year} {E(prof['name'])}</span><span>Updated {dt.date.today():%B %Y}</span></footer>
 </body></html>
 """
 
@@ -232,14 +232,13 @@ def home(prof, news, papers):
     research = "".join(f'<li>{glyph(r["glyph"])}<h3>{E(r["title"])}</h3><p>{E(r["text"])}</p></li>'
                        for r in prof["research"])
     shown, rest = news[:6], news[6:]
-    more = (f'<details><summary>{len(rest)} earlier items</summary><ul class="news">'
+    more = (f'<details><summary>Earlier news</summary><ul class="news">'
             f'{"".join(news_li(n) for n in rest)}</ul></details>') if rest else ""
     grants = "".join(
         f'<li>{logo(g["logo"], g["name"])}<span class="gname">{E(g["name"])}</span>'
         f'<span class="grole">{E(g["role"])}</span>'
         + (f'<span class="gnote">{E(g["note"])}</span>' if g.get("note") else "") + "</li>"
         for g in prof["grants"])
-    n_pre = sum(1 for p in papers if not p["venue"])
     body = f"""
 <section class="hero">
   <div class="intro">
@@ -255,26 +254,25 @@ def home(prof, news, papers):
 </section>
 
 <section>
-  <h2>research</h2>
+  <h2>Research</h2>
   <ul class="research">{research}</ul>
 </section>
 
 <section class="two">
   <div>
-    <h2>news</h2>
+    <h2>News</h2>
     <ul class="news">{"".join(news_li(n) for n in shown)}</ul>
     {more}
   </div>
   <div>
-    <h2>publications</h2>
-    <p class="big"><a href="/publications/"><span class="num">{len(papers)}</span> papers</a></p>
-    <p class="mute">{len(papers) - n_pre} in journals, {n_pre} preprints. Latest:</p>
-    <ul class="mini">{"".join(f'<li><a href="https://arxiv.org/abs/{E(p["arxiv"])}">{E(p["title"])}</a></li>' for p in papers[:3] if p["arxiv"])}</ul>
+    <h2>Recent papers</h2>
+    <ul class="mini">{"".join(f'<li><a href="https://arxiv.org/abs/{E(p["arxiv"])}">{E(p["title"])}</a><span class="mute"> ({p["year"]})</span></li>' for p in papers[:5] if p["arxiv"])}</ul>
+    <p class="more"><a href="/publications/">All publications</a></p>
   </div>
 </section>
 
 <section>
-  <h2>grants</h2>
+  <h2>Funding</h2>
   <ul class="grants">{grants}</ul>
 </section>
 """
@@ -289,11 +287,11 @@ def publications(prof, papers):
         blocks.append(f'<section class="year" data-year="{y}"><h3 class="yr">{y}</h3><ol class="papers">{items}</ol></section>')
     body = f"""
 <section class="head">
-  <h1>publications</h1>
-  <p class="mute">{len(papers)} papers. Also on
+  <h1>Publications</h1>
+  <p class="mute">Also on
   <a href="https://scholar.google.com/citations?user=w4ASA38AAAAJ">Google Scholar</a> and
   <a href="https://arxiv.org/search/?searchtype=author&amp;query=Dua%2C+Arpit">arXiv</a>.</p>
-  <input id="q" type="search" placeholder="filter by title, author, journal, or year" aria-label="filter publications">
+  <input id="q" type="search" placeholder="Filter by title, author, journal, or year" aria-label="Filter publications">
 </section>
 {"".join(blocks)}
 <script>
@@ -303,7 +301,7 @@ document.querySelectorAll('.paper').forEach(li=>li.hidden=t&&!li.dataset.s.inclu
 document.querySelectorAll('.year').forEach(s=>s.hidden=![...s.querySelectorAll('.paper')].some(li=>!li.hidden));}});
 </script>
 """
-    return page("publications", "publications", body, prof, f"Publications of {prof['name']}.")
+    return page("Publications", "publications", body, prof, f"Publications of {prof['name']}.")
 
 
 def group(prof):
@@ -314,10 +312,10 @@ def group(prof):
         f'<p class="mute"><a href="mailto:{E(m["email"])}">{E(m["email"])}</a></p></div></li>'
         for m in g["members"])
     body = f"""
-<section class="head"><h1>group</h1><p class="mute">{E(g["intro"])}</p></section>
+<section class="head"><h1>Group at Virginia Tech</h1><p class="mute">{E(g["intro"])}</p></section>
 <ul class="members">{members}</ul>
 """
-    return page("group", "group", body, prof, f"Research group of {prof['name']}.")
+    return page("Group at Virginia Tech", "group", body, prof, f"Research group of {prof['name']}.")
 
 
 def cv(prof):
@@ -338,19 +336,19 @@ def cv(prof):
         for g in prof["grants"])
     code = "".join(f'<li><a href="{E(c["href"])}">{icon("github", "icon sm")}{E(c["name"])}</a></li>' for c in prof["code"])
     body = f"""
-<section class="head"><h1>cv</h1><p class="mute">{E(prof["name"])}. {" · ".join(E(m) for m in prof["contact"]["emails"])}</p></section>
-<section class="cv"><h2>positions</h2>{rows(prof["positions"])}</section>
-<section class="cv"><h2>education</h2>{rows(prof["education"])}</section>
-<section class="cv"><h2>grants</h2><ul class="rows">{grants}</ul></section>
-<section class="cv"><h2>teaching</h2>{rows(prof["teaching"])}</section>
-<section class="cv"><h2>code</h2><ul class="code">{code}</ul></section>
-<section class="cv"><h2>publications</h2><p><a href="/publications/">Full list of publications</a></p></section>
+<section class="head"><h1>Curriculum vitae</h1><p class="mute">{E(prof["name"])}. {" · ".join(E(m) for m in prof["contact"]["emails"])}</p></section>
+<section class="cv"><h2>Positions</h2>{rows(prof["positions"])}</section>
+<section class="cv"><h2>Education</h2>{rows(prof["education"])}</section>
+<section class="cv"><h2>Funding</h2><ul class="rows">{grants}</ul></section>
+<section class="cv"><h2>Teaching</h2>{rows(prof["teaching"])}</section>
+<section class="cv"><h2>Software</h2><ul class="code">{code}</ul></section>
+<section class="cv"><h2>Publications</h2><p><a href="/publications/">Full list of publications</a></p></section>
 """
-    return page("cv", "cv", body, prof, f"Curriculum vitae of {prof['name']}.")
+    return page("CV", "cv", body, prof, f"Curriculum vitae of {prof['name']}.")
 
 
 def not_found(prof):
-    return page("not found", None, '<section class="head"><h1>not found</h1>'
+    return page("Not found", None, '<section class="head"><h1>Page not found</h1>'
                 '<p class="mute">This page does not exist. Go to the <a href="/">home page</a>.</p></section>', prof)
 
 

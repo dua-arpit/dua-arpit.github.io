@@ -2,4 +2,4 @@
 date: 2023-12-25
 ---
 
-I have moved to Virginia Tech as an Assistant Professor.
+Joined the Department of Physics at Virginia Tech as Assistant Professor.

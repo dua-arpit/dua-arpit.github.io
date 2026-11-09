@@ -2,4 +2,4 @@
 date: 2025-08-01
 ---
 
-I joined [QuEra Computing](https://www.quera.com/) as a Principal Quantum Scientist. I continue as an Assistant Professor at Virginia Tech.
+Joined [QuEra Computing](https://www.quera.com/) as Principal Quantum Scientist, alongside my faculty position at Virginia Tech.

@@ -23,11 +23,11 @@ bio:
     where I lead the collaboration with NVIDIA and manage QuEra's work in the Quantum
     Benchmarking Initiative (QBI). I am also an Assistant Professor in the Department of
     Physics at Virginia Tech. Before this, I was a Joint
-    <a href="https://projects.iq.harvard.edu/ultra-qm/home">Simons</a>-<a href="https://iqim.caltech.edu/">IQIM</a>
+    <a href="https://projects.iq.harvard.edu/ultra-qm/home">Simons</a>–<a href="https://iqim.caltech.edu/">IQIM</a>
     postdoc at Caltech with Xie Chen and a PhD student at Yale University with Meng Cheng
     and Liang Jiang.
   - >-
-    My group works on quantum error correction, fault-tolerant quantum computation,
+    My group at Virginia Tech works on quantum error correction, fault-tolerant quantum computation,
     and topological order.
 
 contact:
@@ -48,32 +48,32 @@ affiliations:
 
 research:
   - glyph: tanner
-    title: high-rate qLDPC codes
+    title: High-rate qLDPC codes
     text: Bivariate bicycle, lifted-product, and GALA/Kasai codes for reconfigurable neutral-atom arrays.
   - glyph: surgery
-    title: logical operations
+    title: Logical operations
     text: Code and lattice surgery, transversal gates, and magic-state preparation.
   - glyph: decoding
-    title: fault-tolerant protocols
+    title: Fault-tolerant protocols
     text: Dynamical and Floquet codes, spacetime concatenation, and decoders.
   - glyph: fracton
-    title: topological order
+    title: Topological order
     text: Fracton and fermionic stabilizer codes, subsystem symmetries, and topological phases as a source of codes.
   - glyph: atoms
-    title: architectures
+    title: Architectures
     text: Fault-tolerant architectures and resource estimates for cryptographically relevant workloads, with AI-assisted co-design.
 
 # Grants: names and roles only, no dates.
 grants:
-  - {name: DOE Office of Science, role: lead PI, logo: doe}
+  - {name: DOE Office of Science, role: Lead PI, logo: doe}
   - {name: NSF Physics (PHY), role: PI, logo: nsf}
   - {name: NSF Quantum Leap Challenge Institute, note: Yale-led, role: Co-Investigator, logo: nsf}
   - {name: DOE Genesis Mission, note: "Phase I, AI-enabled co-design of fault-tolerant logical interfaces in qLDPC codes", role: Co-Investigator, logo: doe}
 
 positions:
-  - {years: 2025 to present, title: Principal Quantum Scientist, org: "QuEra Computing Inc., Boston, MA", notes: [Leads the collaboration with NVIDIA., "Manages QuEra's work in the Quantum Benchmarking Initiative (QBI)."]}
-  - {years: 2023 to present, title: Assistant Professor of Physics, org: "Virginia Tech, Blacksburg, VA"}
-  - {years: 2020 to 2023, title: Joint Simons-IQIM Postdoc, org: "California Institute of Technology, Pasadena, CA", notes: [With Xie Chen.]}   # TODO: confirm years
+  - {years: 2025–present, title: Principal Quantum Scientist, org: "QuEra Computing Inc., Boston, MA", notes: [Leads the collaboration with NVIDIA., "Manages QuEra's work in the Quantum Benchmarking Initiative (QBI)."]}
+  - {years: 2023–present, title: Assistant Professor of Physics, org: "Virginia Tech, Blacksburg, VA"}
+  - {years: 2020–2023, title: Postdoctoral Researcher (Joint Simons–IQIM), org: "California Institute of Technology, Pasadena, CA", notes: [With Xie Chen.]}   # TODO: confirm years
 
 education:
   - {years: "2020", title: PhD, org: "Yale University, New Haven, CT", notes: ["Thesis: Structure of fracton stabilizer models.", "Advisors: Meng Cheng and Liang Jiang."]}
@@ -89,7 +89,7 @@ code:
   - {name: panqec, href: "https://github.com/panqec/panqec"}
 
 group:
-  intro: Prospective students and postdocs, please email me at adua@vt.edu.
+  intro: Prospective students and postdocs are welcome to contact me at adua@vt.edu.
   members:
     - name: Sayandip Dhara
       photo: assets/img/sayandip.jpg
@@ -107,5 +107,5 @@ group:
         supervision of Prof. Vikram Tripathi. His primary focus has been theoretical condensed matter
         physics, and he is now exploring quantum information. His research interests include strongly
         correlated systems, especially quantum spin liquids, topological phases of matter, and
-        topological quantum computing. Apart from research, he loves watching cricket, cooking, and trekking.
+        topological quantum computing.
       email: jagannath.das0111@gmail.com

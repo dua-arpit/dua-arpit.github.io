@@ -78,7 +78,7 @@ def load_papers():
     return papers
 
 
-def load_news():
+def load_news(papers):
     items = []
     for f in sorted((SRC / "news").glob("*.md")):
         raw = f.read_text(encoding="utf-8").replace("\r\n", "\n")
@@ -89,6 +89,12 @@ def load_news():
             d = dt.datetime.fromisoformat(d.strip()[:10])
         body_html = markdown.markdown(body.strip())
         body_html = re.sub(r"^<p>(.*)</p>$", r"\1", body_html, flags=re.S)
+        pid = str(meta.get("paper") or "").strip()
+        if pid:
+            match = [p for p in papers if p["arxiv"] == pid]
+            if not match:
+                raise SystemExit(f"{f.name}: paper {pid} is not in papers.bib")
+            body_html += f'<span class="nauth">{fmt_authors(match[0]["authors"])}</span>'
         items.append(dict(date=d, html=body_html))
     items.sort(key=lambda n: n["date"], reverse=True)
     return items
@@ -373,7 +379,8 @@ def main():
             shutil.rmtree(t)
         elif t.exists():
             t.unlink()
-    prof, papers, news = load_profile(), load_papers(), load_news()
+    prof, papers = load_profile(), load_papers()
+    news = load_news(papers)
 
     def write(rel, text):
         f = out / rel

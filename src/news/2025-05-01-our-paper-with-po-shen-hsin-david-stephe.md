@@ -1,5 +1,6 @@
 ---
 date: 2025-05-01
+paper: "2403.09098"   # arXiv id; the author list is taken from papers.bib
 ---
 
-[Subsystem Symmetry Fractionalization and Foliated Field Theory](https://doi.org/10.21468/SciPostPhys.18.5.147), with Po-Shen Hsin, David Stephen, and Dominic Williamson, published in SciPost Physics.
+Published in SciPost Physics: [Subsystem Symmetry Fractionalization and Foliated Field Theory](https://doi.org/10.21468/SciPostPhys.18.5.147).

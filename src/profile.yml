@@ -105,6 +105,14 @@ group:
         the scaling behavior of logical error rates in qLDPC codes.
     - name: Chuen Hei Chan
       role: Graduate student
+      photo: assets/img/chuenhei.jpg
+      bio: >-
+        Chuen Hei is a Ph.D. student in Physics and is interested in topological order in quantum
+        information and the algebraic structure of qLDPC codes. His current work focuses on designing and
+        optimizing qLDPC codes to reduce physical-qubit overhead while preserving logical capacity and code
+        distance. He has also been working with Prof. Sophia Economou and Prof. Edwin Barnes on quantum
+        network and photonic graph state generation, and his broader research interests include the
+        interplay between quantum error correction, quantum networks, and distributed quantum computing.
     - name: Alexander Shupp
       role: Research assistant
       photo: assets/img/alexander.jpg

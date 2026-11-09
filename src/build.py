@@ -235,9 +235,9 @@ def home(prof, news, papers):
     more = (f'<details><summary>Earlier news</summary><ul class="news">'
             f'{"".join(news_li(n) for n in rest)}</ul></details>') if rest else ""
     grants = "".join(
-        f'<li>{logo(g["logo"], g["name"])}<span class="gname">{E(g["name"])}</span>'
-        f'<span class="grole">{E(g["role"])}</span>'
-        + (f'<span class="gnote">{E(g["note"])}</span>' if g.get("note") else "") + "</li>"
+        f'<li>{logo(g["logo"], g["name"])}<span class="gtitle">{E(g["title"])}</span>'
+        f'<span class="gname">{E(g["name"])}' + (f', {E(g["note"])}' if g.get("note") else "") + '</span>'
+        f'<span class="grole">{E(g["role"])}</span></li>'
         for g in prof["grants"])
     body = f"""
 <section class="hero">
@@ -299,11 +299,21 @@ document.querySelectorAll('.year').forEach(s=>s.hidden=![...s.querySelectorAll('
 
 def group(prof):
     g = prof["group"]
-    members = "".join(
-        f'<li><img src="/{E(m["photo"])}" alt="{E(m["name"])}" width="240" height="300" loading="lazy">'
-        f'<div><h3>{E(m["name"])}</h3><p>{E(m["bio"])}</p>'
-        f'<p class="mute"><a href="mailto:{E(m["email"])}">{E(m["email"])}</a></p></div></li>'
-        for m in g["members"])
+
+    def portrait(m):
+        if m.get("photo"):
+            return f'<img src="/{E(m["photo"])}" alt="{E(m["name"])}" width="240" height="300" loading="lazy">'
+        initials = "".join(w[0] for w in m["name"].split()[:2] if w)
+        return f'<div class="mono" aria-hidden="true">{E(initials)}</div>'
+
+    def li(m):
+        role = f'<p class="role">{E(m["role"])}</p>' if m.get("role") else ""
+        bio = f'<p>{E(m["bio"])}</p>' if m.get("bio") else ""
+        mail = (f'<p class="mute"><a href="mailto:{E(m["email"])}">{E(m["email"])}</a></p>'
+                if m.get("email") else "")
+        return f'<li>{portrait(m)}<div><h3>{E(m["name"])}</h3>{role}{bio}{mail}</div></li>'
+
+    members = "".join(li(m) for m in g["members"])
     body = f"""
 <section class="head"><h1>Group at Virginia Tech</h1><p class="mute">{E(g["intro"])}</p></section>
 <ul class="members">{members}</ul>
@@ -324,8 +334,8 @@ def cv(prof):
                        + (f'<ul class="notes">{notes}</ul>' if notes else "") + "</div></li>")
         return '<ul class="rows">' + "".join(out) + "</ul>"
     grants = "".join(
-        f'<li><span class="when">{E(g["role"])}</span><div><span class="what">{E(g["name"])}</span>'
-        + (f'<span class="where">{E(g["note"])}</span>' if g.get("note") else "") + "</div></li>"
+        f'<li><span class="when">{E(g["role"])}</span><div><span class="what">{E(g["title"])}</span>'
+        f'<span class="where">{E(g["name"])}' + (f', {E(g["note"])}' if g.get("note") else "") + "</span></div></li>"
         for g in prof["grants"])
     code = "".join(f'<li><a href="{E(c["href"])}">{icon("github", "icon sm")}{E(c["name"])}</a></li>' for c in prof["code"])
     body = f"""

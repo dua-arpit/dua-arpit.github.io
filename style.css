@@ -105,9 +105,9 @@ details[open] summary::before{content:"− "}
 .grants{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}
 .grants li{display:flex;flex-direction:column;gap:4px;padding:18px;background:var(--paper);border:1px solid var(--faint);border-radius:10px}
 .grants .logo{height:30px;margin-bottom:10px;align-self:flex-start}
-.gname{font-size:16px;line-height:1.35}
-.grole{font-size:14px;color:var(--t)}
-.gnote{font-size:13.5px;color:var(--mute);line-height:1.45}
+.gtitle{font-size:16px;line-height:1.4}
+.gname{font-size:14px;color:var(--mute);line-height:1.45;margin-top:4px}
+.grole{font-size:14px;color:var(--t);margin-top:auto;padding-top:10px}
 
 /* publications page */
 input[type=search]{margin-top:18px;width:100%;max-width:440px;font:inherit;font-size:15px;color:var(--ink);background:var(--paper);border:1px solid var(--faint);border-radius:8px;padding:10px 14px;outline:none}
@@ -128,7 +128,11 @@ input[type=search]:focus{border-color:var(--t)}
 /* group */
 .members li{display:grid;grid-template-columns:200px minmax(0,1fr);gap:40px;padding:32px 0;border-top:1px solid var(--faint)}
 .members img{width:200px;aspect-ratio:4/5;object-fit:cover;border-radius:10px;background:var(--zone)}
-.members h3{font-size:24px;margin-bottom:12px}
+.members h3{font-size:24px;margin-bottom:4px}
+.members .role{color:var(--t);font-size:15px;margin-bottom:12px}
+.members h3:last-child{margin-bottom:0}
+.members h3+p:not(.role){margin-top:10px}
+.mono{width:200px;aspect-ratio:4/5;border-radius:10px;background:var(--zone);display:flex;align-items:center;justify-content:center;font-size:44px;color:var(--wire);letter-spacing:.02em}
 .members p{max-width:64ch}
 
 /* cv */
@@ -170,7 +174,7 @@ footer{display:flex;justify-content:space-between;gap:16px;padding-top:22px;padd
   .year{grid-template-columns:1fr;gap:10px}
   .yr{font-size:30px}
   .members li{grid-template-columns:1fr;gap:16px}
-  .members img{width:160px}
+  .members img,.mono{width:160px}
   .rows li{grid-template-columns:1fr;gap:2px}
   h1{font-size:32px}
   .num{font-size:64px}

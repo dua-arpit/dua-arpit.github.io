@@ -61,12 +61,12 @@ research:
     title: Architectures
     text: Fault-tolerant architectures and resource estimates for cryptographically relevant workloads, with AI-assisted co-design.
 
-# Grants: names and roles only, no dates.
+# Grants: titles, agencies and roles only, no dates.
 grants:
-  - {name: DOE Office of Science, role: Lead PI, logo: doe}
-  - {name: NSF Physics (PHY), role: PI, logo: nsf}
-  - {name: NSF Quantum Leap Challenge Institute, note: Yale-led, role: Co-Investigator, logo: nsf}
-  - {name: DOE Genesis Mission, note: "Phase I, AI-enabled co-design of fault-tolerant logical interfaces in qLDPC codes", role: Co-Investigator, logo: doe}
+  - {title: Advancing Quantum Computation Beyond Qubits, name: DOE Office of Science, role: Lead PI, logo: doe}
+  - {title: Ultra-high Performance Quantum Memories through Symmetries, name: NSF Physics (PHY), role: PI, logo: nsf}
+  - {title: The Physics and Engineering of Practical Quantum Error Correction (PRACTIQAL), name: NSF Quantum Leap Challenge Institute, note: Yale-led, role: Co-Investigator, logo: nsf}
+  - {title: AI-enabled co-design of fault-tolerant logical interface in quantum LDPC codes, name: DOE Genesis Mission, note: Phase I, role: Co-Lead, logo: doe}
 
 positions:
   - {years: 2025–present, title: Principal Quantum Scientist, org: "QuEra Computing Inc., Boston, MA"}
@@ -107,3 +107,9 @@ group:
         correlated systems, especially quantum spin liquids, topological phases of matter, and
         topological quantum computing.
       email: jagannath.das0111@gmail.com
+    - name: Pedro Medina
+      role: Graduate student
+    - name: Chuen Hei Chan
+      role: Graduate student
+    - name: Alexander Shupp
+      role: Undergraduate student

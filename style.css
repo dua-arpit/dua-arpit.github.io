@@ -32,7 +32,7 @@ nav a[aria-current]{color:var(--ink);border-bottom-color:var(--t)}
 
 main.wrap{padding-top:56px;padding-bottom:40px}
 section{margin-bottom:72px}
-h2{font-size:14px;letter-spacing:.04em;color:var(--mute);margin-bottom:22px;padding-bottom:10px;border-bottom:1px solid var(--faint)}
+h2{font-size:15px;letter-spacing:.01em;color:var(--mute);margin-bottom:22px;padding-bottom:10px;border-bottom:1px solid var(--faint)}
 h1{font-size:40px;letter-spacing:-.01em;margin-bottom:10px}
 .head{margin-bottom:48px}
 
@@ -95,7 +95,10 @@ details[open] summary::before{content:"− "}
 .big a{background:none}
 .num{font-size:84px;line-height:1;color:var(--t);letter-spacing:-.02em;margin-right:8px}
 .big a{font-size:18px;color:var(--mute)}
-.mini li{padding:8px 0;border-bottom:1px solid var(--zone);font-size:15px;line-height:1.45}
+.mini li{padding:10px 0;border-bottom:1px solid var(--zone);font-size:15.5px;line-height:1.5}
+.more{margin-top:14px;font-size:14.5px}
+.more a{color:var(--t);background:none}
+.more a:hover{background-image:linear-gradient(var(--t),var(--t))}
 
 /* grants */
 .grants{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}

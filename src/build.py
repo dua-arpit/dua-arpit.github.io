@@ -237,7 +237,7 @@ def home(prof, news, papers):
     grants = "".join(
         f'<li>{logo(g["logo"], g["name"])}<span class="gtitle">{E(g["title"])}</span>'
         f'<span class="gname">{E(g["name"])}' + (f', {E(g["note"])}' if g.get("note") else "") + '</span>'
-        f'<span class="grole">{E(g["role"])}</span></li>'
+        f'<span class="grole">{E(g["role"] + (" · " + g["effort"] + " effort" if g.get("effort") else ""))}</span></li>'
         for g in prof["grants"])
     body = f"""
 <section class="hero">
@@ -341,7 +341,7 @@ def cv(prof):
                        + (f'<ul class="notes">{notes}</ul>' if notes else "") + "</div></li>")
         return '<ul class="rows">' + "".join(out) + "</ul>"
     grants = "".join(
-        f'<li><span class="when">{E(g["role"])}</span><div><span class="what">{E(g["title"])}</span>'
+        f'<li><span class="when">{E(g["role"] + (" · " + g["effort"] + " effort" if g.get("effort") else ""))}</span><div><span class="what">{E(g["title"])}</span>'
         f'<span class="where">{E(g["name"])}' + (f', {E(g["note"])}' if g.get("note") else "") + "</span></div></li>"
         for g in prof["grants"])
     code = "".join(f'<li><a href="{E(c["href"])}">{icon("github", "icon sm")}{E(c["name"])}</a></li>' for c in prof["code"])

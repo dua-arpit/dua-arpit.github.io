@@ -19,10 +19,8 @@ roles:
 
 bio:
   - >-
-    I am a Principal Quantum Scientist at <a href="https://www.quera.com/">QuEra Computing</a>,
-    where I lead the collaboration with NVIDIA and manage QuEra's work in the Quantum
-    Benchmarking Initiative (QBI). I am also an Assistant Professor in the Department of
-    Physics at Virginia Tech. Before this, I was a Joint
+    I am a Principal Quantum Scientist at <a href="https://www.quera.com/">QuEra Computing</a>
+    and an Assistant Professor in the Department of Physics at Virginia Tech. Before this, I was a Joint
     <a href="https://projects.iq.harvard.edu/ultra-qm/home">Simons</a>–<a href="https://iqim.caltech.edu/">IQIM</a>
     postdoc at Caltech with Xie Chen and a PhD student at Yale University with Meng Cheng
     and Liang Jiang.
@@ -71,7 +69,7 @@ grants:
   - {name: DOE Genesis Mission, note: "Phase I, AI-enabled co-design of fault-tolerant logical interfaces in qLDPC codes", role: Co-Investigator, logo: doe}
 
 positions:
-  - {years: 2025–present, title: Principal Quantum Scientist, org: "QuEra Computing Inc., Boston, MA", notes: [Leads the collaboration with NVIDIA., "Manages QuEra's work in the Quantum Benchmarking Initiative (QBI)."]}
+  - {years: 2025–present, title: Principal Quantum Scientist, org: "QuEra Computing Inc., Boston, MA"}
   - {years: 2023–present, title: Assistant Professor of Physics, org: "Virginia Tech, Blacksburg, VA"}
   - {years: 2020–2023, title: Postdoctoral Researcher (Joint Simons–IQIM), org: "California Institute of Technology, Pasadena, CA", notes: [With Xie Chen.]}   # TODO: confirm years
 

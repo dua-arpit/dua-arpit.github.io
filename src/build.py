@@ -258,17 +258,10 @@ def home(prof, news, papers):
   <ul class="research">{research}</ul>
 </section>
 
-<section class="two">
-  <div>
-    <h2>News</h2>
-    <ul class="news">{"".join(news_li(n) for n in shown)}</ul>
-    {more}
-  </div>
-  <div>
-    <h2>Recent papers</h2>
-    <ul class="mini">{"".join(f'<li><a href="https://arxiv.org/abs/{E(p["arxiv"])}">{E(p["title"])}</a><span class="mute"> ({p["year"]})</span></li>' for p in papers[:5] if p["arxiv"])}</ul>
-    <p class="more"><a href="/publications/">All publications</a></p>
-  </div>
+<section class="newsblock">
+  <h2>News</h2>
+  <ul class="news">{"".join(news_li(n) for n in shown)}</ul>
+  {more}
 </section>
 
 <section>

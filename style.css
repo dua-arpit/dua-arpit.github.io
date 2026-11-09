@@ -141,6 +141,7 @@ input[type=search]:focus{border-color:var(--t)}
 .alumni-list img,.alumni-list .mono{width:72px;height:72px;aspect-ratio:1/1;object-fit:cover;border-radius:50%;font-size:22px}
 .alumni-list h3{font-size:18px;margin:0 0 2px}
 .alumni-list p{margin:0;font-size:15px}
+.alumni-list .role{color:var(--t);font-size:14.5px;margin:0 0 2px}
 
 /* cv */
 .cv{margin-bottom:52px}

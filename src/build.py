@@ -316,6 +316,7 @@ def group(prof):
     members = "".join(li(m) for m in g["members"])
     alumni = "".join(
         f'<li>{portrait(m)}<div><h3>{E(m["name"])}</h3>'
+        + (f'<p class="role">Former {E(m["role"][0].lower() + m["role"][1:])}</p>' if m.get("role") else "")
         + (f'<p class="mute">Now: {E(m["now"])}</p>' if m.get("now") else "") + '</div></li>'
         for m in g.get("alumni", []))
     alumni_block = f'<section class="alumni"><h2>Alumni</h2><ul class="alumni-list">{alumni}</ul></section>' if alumni else ""

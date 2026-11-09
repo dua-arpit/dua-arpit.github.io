@@ -103,5 +103,6 @@ group:
       role: Undergraduate student
   alumni:
     - name: Sayandip Dhara
+      role: Postdoctoral researcher
       photo: assets/img/sayandip.jpg
       now: Quantum Error Correction Researcher, Welinq, Paris, France

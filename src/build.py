@@ -242,7 +242,6 @@ def home(prof, news, papers):
     body = f"""
 <section class="hero">
   <div class="intro">
-    <ul class="roles">{roles}</ul>
     {bio}
     <div class="orgs">{aff}</div>
   </div>

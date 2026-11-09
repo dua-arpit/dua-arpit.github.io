@@ -30,15 +30,11 @@ bio:
 
 contact:
   emails: [adua@quera.com, adua@vt.edu]
-  offices:
-    - QuEra Computing Inc., Boston, MA
-    - 317 Robeson Hall, 850 W Campus Dr, Blacksburg, VA 24061
 
 links:
   - {label: Google Scholar, icon: googlescholar, href: "https://scholar.google.com/citations?user=w4ASA38AAAAJ"}
   - {label: arXiv, icon: arxiv, href: "https://arxiv.org/search/?searchtype=author&query=Dua%2C+Arpit"}
   - {label: GitHub, icon: github, href: "https://github.com/dua-arpit"}
-  - {label: X, icon: x, href: "https://x.com/_arpit_dua_"}
 
 affiliations:
   - {name: QuEra Computing, logo: quera, href: "https://www.quera.com/"}

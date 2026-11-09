@@ -226,7 +226,7 @@ def home(prof, news, papers):
     bio = "".join(f"<p>{b}</p>" for b in prof["bio"])
     links = "".join(f'<a href="{E(l["href"])}">{icon(l["icon"])}<span>{E(l["label"])}</span></a>' for l in prof["links"])
     mails = "".join(f'<a href="mailto:{E(m)}">{E(m)}</a>' for m in prof["contact"]["emails"])
-    offices = "".join(f"<span>{E(o)}</span>" for o in prof["contact"]["offices"])
+    offices = "".join(f"<span>{E(o)}</span>" for o in prof["contact"].get("offices", []))
     aff = "".join(f'<a class="org" href="{E(a["href"])}">{logo(a["logo"], a["name"])}<span>{E(a["name"])}</span></a>'
                   for a in prof["affiliations"])
     research = "".join(f'<li>{glyph(r["glyph"])}<h3>{E(r["title"])}</h3><p>{E(r["text"])}</p></li>'

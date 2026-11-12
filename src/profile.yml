@@ -99,28 +99,25 @@ group:
       role: Graduate student
       photo: assets/img/pedro.jpg
       bio: >-
-        Pedro is a Ph.D. student in Physics at Virginia Tech. He is interested in the construction and
-        properties of qLDPC codes, their performance under different noise models, and the development
-        of decoding strategies. His current research focuses on single-shot decoding and understanding
-        the scaling behavior of logical error rates in qLDPC codes.
+        Pedro is a Ph.D. student in Physics at Virginia Tech. He works on quantum LDPC codes, their
+        performance under different noise models, and decoding strategies.
     - name: Chuen Hei Chan
       role: Graduate student
       photo: assets/img/chuenhei.jpg
       bio: >-
-        Chuen Hei is a Ph.D. student in Physics and is interested in topological order in quantum
-        information and the algebraic structure of qLDPC codes. His current work focuses on designing and
-        optimizing qLDPC codes to reduce physical-qubit overhead while preserving logical capacity and code
-        distance. He has also been working with Prof. Sophia Economou and Prof. Edwin Barnes on quantum
-        network and photonic graph state generation, and his broader research interests include the
-        interplay between quantum error correction, quantum networks, and distributed quantum computing.
+        Chuen Hei is a Ph.D. student in Physics at Virginia Tech. He is interested in topological
+        order in quantum information and the algebraic structure of quantum LDPC codes, and works on
+        the design of qLDPC codes. He has also worked with Prof. Sophia Economou and Prof. Edwin
+        Barnes on quantum networks and photonic graph states. His broader interests include the
+        interplay between quantum error correction, quantum networks, and distributed quantum
+        computing.
     - name: Alexander Shupp
       role: Research assistant
       photo: assets/img/alexander.jpg
       bio: >-
         Alexander completed his BS in Physics at Virginia Tech in May 2026. He currently works as a
-        research assistant, developing graphical methods to represent known Majorana fermion codes and
-        construct new ones. His research interests include quantum error correction, graphical tensor
-        calculi, and topological quantum computing.
+        research assistant on graphical calculi for quantum codes. His research interests include
+        quantum error correction, graphical tensor calculi, and topological quantum computing.
   alumni:
     - name: Sayandip Dhara
       role: Postdoctoral researcher
